@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Head Elements and tags -->
+    <title>Timesheet Maker</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/timesheet.css">
+</head>
+
+<body>
+    <!-- Title of the project name - TimeSheet Maker -->
+    <h1 id="title_TM">Timesheet Maker📝</h1>
+
+    <!-- Form element for user data -->
+    <div class="Form_Div"><form id="timesheetForm">
+        <div>
+            <label for="week">1️⃣ Week:</label>
+            <input type="number" id="week" tabindex="1" placeholder="Enter week no.">
+        </div>
+        <div>
+            <label for="name">2️⃣ Name:</label>
+            <input type="text" id="name" tabindex="2" placeholder="Enter your name">
+        </div>
+        <div>
+            <label for="course">3️⃣ Course name:</label>
+            <input type="text" id="course" tabindex="3" placeholder="Enter your course/subject name">
+        </div>
+        <div>
+            <label for="activity">4️⃣ Activity:</label>
+            <input type="text" id="activity" tabindex="4" placeholder="Enter the activity">
+        </div>
+        <div>
+            <label for="date">5️⃣ Date:</label>
+            <input type="date" id="date" tabindex="5">
+        </div>
+        <div>
+            <label for="time">6️⃣ Time (minutes):</label>
+            <input type="number" id="time" tabindex="6">
+        </div>
+        <div>
+            <label for="notes">7️⃣ Important notes:</label>
+            <textarea id="notes" tabindex="7" placeholder="Enter your notes" ></textarea>
+        </div>
+    
+        <!-- Button to submit data and add to timesheet -->
+        <button type="button" onclick="addRow()">Add to timesheet</button>
+    </form></div>
+
+    <!-- Table to display timesheet data -->
+    <div class="table_div"><table id="timesheet">
+        <thead>
+            <tr>
+                <th>Week</th>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Activity</th>
+                <th>Date</th>
+                <th>Time (hours)</th>
+                <th>Notes</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+    <!-- Button to calculate total time for each week -->
+    <div class="button_center"><button onclick="calculateTotal()">Calculate total time</button></div>
+
+    <!-- Table to display total time for each week -->
+    <div class="table_div">
+    <table id="totals">
+        <thead>
+            <tr>
+                <th>Week</th>
+                <th>Total Time (hours)</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+    <!-- Button to print timesheet -->
+    <div class="button_center"><button onclick="printTimesheet()">Print timesheet</button></div>
+    <script src="js/timesheet.js"></script>
+</body>
+
+</html>
